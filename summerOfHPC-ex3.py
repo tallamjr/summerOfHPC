@@ -1,31 +1,32 @@
-import math
+# EXERCISE 3
+
+## IMPORTS
 import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import time
+import math
 
 pi_true = np.pi
 print(pi_true)
-
-def pi_error(N):
-
-    pi_err = np.abs(pi_true - pi_approx(N))
-
-    #print("The true value of pi = {}, the approxiamtion = {}".format(pi_true, pi_approx(N)))
-    #print("Thus, the error is = {}".format(pi_err))
-
-    return pi_err
 
 def pi_approx(N):
     summation = 0
     for i in range(N):
         alpha  = (i - 0.5)/N
         summation = summation + 1 / (1 + alpha**2)
-        #print("i = {} and summation = {}".format(i, summation))
 
     result = (4 / N)*summation
-    #print("pi approximation = {}".format(result))
 
     return result
 
-# first search
+def pi_error(N):
+
+    pi_err = np.abs(pi_true - pi_approx(N))
+
+    return pi_err
+
+# First search
 guesses = []
 guess = 10
 
@@ -66,3 +67,6 @@ while True:
                 break
         break
         # return middle
+
+end = time.time()
+print("Took {} s".format((end - start)))
