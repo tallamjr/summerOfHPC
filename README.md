@@ -13,11 +13,11 @@ problem to solve, so here are my solutions.
 
 The following expansion gives an approximation to the exact value of π:
 
-![equation](equation0-img.png)
+![equation](/img/equation0-img.png)
 
 We can check this by hand like so...
 
-![equation2](equation1-img.png)
+![equation2](./img/equation1-img.png)
 
 It can be shown that the approximation continues to become more accurate as N is
 increased. Note that you must use double-precision variables for ALL floating-point
