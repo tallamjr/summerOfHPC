@@ -26,6 +26,7 @@ def pi_error(N):
 
     return pi_err
 
+start = time.time()
 # First search
 guesses = []
 guess = 10
